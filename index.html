@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laiba Rani | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Laiba</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h3>Hi There, I'm</h3>
+      <h1><span>Laiba Rani</span></h1>
+      <h2>Computer Science Student</h2>
+      <p>
+        Passionate about programming, web development, and building creative projects.
+      </p>
+      <a href="mailto:23-20911-053@cs.fjwu.edu.pk" class="btn">Contact Me</a>
+    </div>
+
+    <div class="hero-img">
+      <div class="circle">
+        <img src="c:\Users\Administrator\Downloads\WhatsApp Image 2025-09-26 at 5.17.01 PM.jpeg" alt="Laiba Rani">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-img">
+        <img src="c:\Users\Administrator\Downloads\WhatsApp Image 2025-09-26 at 6.03.28 PM.jpeg" alt="Laiba Rani">
+      </div>
+      <div class="about-text">
+        <p>
+          My name is <b>Laiba Rani</b>, and I am a Computer Science student at FJWU.  
+          I enjoy learning new technologies, solving problems, and building projects that combine creativity with functionality.  
+          My goal is to grow as a developer and contribute to impactful software solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <h3>Project 1</h3>
+        <p>Smash Magazine</p>
+        <a href="c:\Users\Administrator\Downloads\ICTLABPROJECT.pdf" target="_blank" class="btn">View Project</a>
+      </div>
+      <div class="portfolio-card">
+        <h3>Project 2</h3>
+        <p>Online Restaurant Reservation System</p>
+        <a href="c:\Users\Administrator\Downloads\DOC-20250531-WA0085._20250926_215345_0000.pdf" target="_blank" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>You can reach me at:  
+      <a href="mailto:23-20911-053@cs.fjwu.edu.pk">23-20911-053@cs.fjwu.edu.pk</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Laiba Rani | Computer Science Student</p>
+  </footer>
+
+  <!-- Active Navbar Script -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
